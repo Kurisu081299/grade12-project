@@ -1,0 +1,158 @@
+<style>
+  .container {
+    background-color: #d4ffcd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #000;
+    font-weight: 400;
+    padding: 80px 60px;
+  }
+
+  @media (max-width: 991px) {
+    .container {
+      padding: 20px;
+    }
+  }
+
+  .content-wrapper {
+    display: flex;
+    margin-top: 171px;
+    width: 100%;
+    max-width: 2167px;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  @media (max-width: 991px) {
+    .content-wrapper {
+      max-width: 100%;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 991px) {
+    .image-container {
+      max-width: 100%;
+    }
+  }
+
+  .image {
+    aspect-ratio: 2.86;
+    object-fit: cover;
+    object-position: center;
+    width: 522px;
+    max-width: 100%;
+  }
+
+  .login-form {
+    align-self: end;
+    display: flex;
+    margin-top: 486px;
+    width: 716px;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 991px) {
+    .login-form {
+      margin-top: 40px;
+    }
+  }
+
+  .form-title {
+    font: 700 48px Inter, sans-serif;
+  }
+
+  @media (max-width: 991px) {
+    .form-title {
+      font-size: 40px;
+    }
+  }
+
+  .form-input {
+    font-family: Inter, sans-serif;
+    background-color: #fff;
+    align-self: stretch;
+    margin-top: 60px;
+    align-items: center;
+    white-space: nowrap;
+    padding: 65px 60px 37px;
+  }
+
+  @media (max-width: 991px) {
+    .form-input {
+      white-space: initial;
+      max-width: 100%;
+      margin-top: 40px;
+      padding: 20px;
+    }
+  }
+
+  .forgot-password {
+    font-family: Inter, sans-serif;
+    margin-top: 29px;
+  }
+
+  .login-button {
+    font-family: Inter, sans-serif;
+    border-radius: 50%;
+    background-color: #608150;
+    margin-top: 30px;
+    width: 521px;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    padding: 46px 60px;
+  }
+
+  @media (max-width: 991px) {
+    .login-button {
+      white-space: initial;
+      padding: 20px;
+    }
+  }
+
+  .decorative-image {
+    aspect-ratio: 0.95;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    align-self: end;
+    margin-top: 492px;
+  }
+
+  @media (max-width: 991px) {
+    .decorative-image {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+</style>
+
+<main class="container">
+  <div class="content-wrapper">
+    <div class="image-container">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/2221b99d3ca4ba9a507146d104461a26dcf1755005b23fff496b9744330e84d7?apiKey=1a3f304a29ac48449d1b431bf8b58a54&" alt="Decorative image" class="image" />
+      <form class="login-form">
+        <h2 class="form-title">Information log in</h2>
+        <label for="email" class="visually-hidden">Email Address</label>
+        <input type="email" id="email" placeholder="Email Address" class="form-input" />
+        <label for="password" class="visually-hidden">Password</label>
+        <input type="password" id="password" placeholder="Password" class="form-input" />
+        <a href="#" class="forgot-password">Forgot password</a>
+        <button type="submit" class="login-button">Log in</button>
+      </form>
+    </div>
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a8d937ca41a05162c319b33d07994f137cadc48ba32807dc6885baf92fd9e801?apiKey=1a3f304a29ac48449d1b431bf8b58a54&" alt="" class="decorative-image" />
+  </div>
+</main>

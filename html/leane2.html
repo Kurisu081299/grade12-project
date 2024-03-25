@@ -1,0 +1,82 @@
+<style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+      min-height: 1967px;
+      width: 100%;
+      align-items: flex-end;
+      padding: 80px;
+    }
+  
+    @media (max-width: 991px) {
+      .container {
+        max-width: 100%;
+        font-size: 40px;
+        white-space: initial;
+        padding: 0 20px;
+      }
+    }
+  
+    .background-image {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  
+    .edit-button {
+      position: relative;
+      font-family: Inter, sans-serif;
+      background-color: rgba(96, 129, 80, 1);
+      margin-top: 1592px;
+      width: 323px;
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 60px;
+    }
+  
+    @media (max-width: 991px) {
+      .edit-button {
+        font-size: 40px;
+        margin-top: 40px;
+        white-space: initial;
+        padding: 0 20px;
+      }
+    }
+  
+    .save-button {
+      position: relative;
+      font-family: Inter, sans-serif;
+      background-color: rgba(96, 129, 80, 1);
+      width: 323px;
+      max-width: 100%;
+      display: flex;
+      align-items: center;
+      margin: 59px 0 4px;
+      padding: 26px 60px 14px;
+    }
+  
+    @media (max-width: 991px) {
+      .save-button {
+        font-size: 40px;
+        margin-top: 40px;
+        white-space: initial;
+        padding: 0 20px;
+      }
+    }
+  </style>
+  
+  <main class="container">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/51a39c07a59b5784c97b053ba4d96ada52fb0d80c0a876e278d4eb4f3b65ad22?apiKey=1a3f304a29ac48449d1b431bf8b58a54&" alt="Background image" class="background-image" />
+    <button class="edit-button">Edit</button>
+    <button class="save-button">
+      save
+      <br />
+    </button>
+  </main>
