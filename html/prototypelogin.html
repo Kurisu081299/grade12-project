@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<style>
+		body {
+			background-color: #d1e7dd;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: #f1faee;
+			padding: 20px;
+			border-radius: 5px;
+			margin: 100px auto;
+			width: 300px;
+			box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+		}
+
+		h2 {
+			color: #1d3557;
+			font-weight: bold;
+			font-size: 28px;
+			margin-bottom: 20px;
+		}
+
+		input[type="email"], input[type="password"] {
+			padding: 10px;
+			margin: 5px;
+			border-radius: 5px;
+			border-color: #1d3557;
+			width: 100%;
+		}
+
+		input[type="submit"] {
+			background-color: #1d3557;
+			color: white;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			width: 100%;
+		}
+
+		#logo {
+			display: block;
+			margin: 30px auto;
+			max-width: 200px;
+			height: auto;
+			filter: brightness(150%);
+			box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+		}
+	</style>
+</head>
+<body>
+	<form onsubmit="return login()">
+		<h2>Login</h2>
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username">
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password">
+		<input type="submit" value="Login">
+	</form>
+	<img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0cBz46R_7zXaB0xEk6y9WlNa31GJNZPfIKA&usqp=CAU" alt="Logo">
+	<script>
+		function login() {
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+
+			if (username === "admin" && password === "password") {
+				alert("Login successful!");
+				window.location.href = "prototypeloadingpage.html";
+				return false;
+			} else {
+				alert("Incorrect username or password.");
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>
