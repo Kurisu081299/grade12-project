@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Loading Page</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			color: #333;
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+		.loader {
+			border: 16px solid #f3f3f3;
+			border-top: 16px solid #4CAF50;
+			border-radius: 50%;
+			width: 120px;
+			height: 120px;
+			animation: spin 2s linear infinite;
+		}
+		@keyframes spin {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+		.text {
+			margin-top: 40px;
+			text-align: center;
+			font-weight: bold;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="loader"></div>
+		<div class="text">Loading...</div>
+	</div>
+	<script>
+		setTimeout(function() {
+			window.location.href = "protoalumni.html";
+		}, 2000); // redirect after 2 seconds
+	</script>
+</body>
+</html>
