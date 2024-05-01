@@ -1,4 +1,4 @@
-const dbConn = require("../config/db.config");
+const dbConn = require("../config/dbconfig");
 
 const UserModel = {};
 
@@ -14,7 +14,7 @@ UserModel.getpersonalinformationData = (callback) => {
 };
 
 UserModel.insertpersonalinformationData = (data, callback) => {
-  dbConn.query("INSERT INTO studentinfo (id, Grade_level, name, LRN , birthday, Email, msteams, name of parents, contact no., Email of parents, address ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", [data.name, data.LRN, data.birthday,data.Email,data.msteams,data.nameofparents,data.contactno,data.emailofparents,data.address], (error, result) => {
+  dbConn.query("INSERT INTO studentinfo (Grade_Level=?, Name=?, LRN=? , Birthday=?, Email=?, Ms_Teams=?, Nameofparents=?, Contactno=?, Emailofparents=?, Address=? ) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?,?)", [data.Grade_Level, data.Name, data.LRN, data.Birthday,data.Email,data.Ms_Teams,data.Nameofparents,data.Contactno,data.Emailofparents,data.Address], (error, result) => {
     if (error) {
       console.error("Error inserting personalinformation data: ", error);
       return callback(error, null);
@@ -26,8 +26,8 @@ UserModel.insertpersonalinformationData = (data, callback) => {
 
 UserModel.updatepersonalinformationData = (id, data, callback) => {
   dbConn.query(
-    "UPDATE studentinfo SET id=?, Grade_level=?, name=?, LRN=? , birthday=?, Email=?, msteams=?, name of parents=?, contact no.=?, Email of parents=?, address=? WHERE id=?",
-    [data.id, data.Grade_level, data.name, data.LRN, data.birthday,data.Email,data.msteams,data.nameofparents,data.contactno,data.emailofparents,data.address, id],
+    "UPDATE studentinfo SET id=?, Grade_level=?, Name=?, LRN=? , Birthday=?, Email=?, Ms_Teams=?, Nameofparents=?, Contactno=?, Emailofparents=?, Address=? WHERE id=?",
+    [data.ID, data.Grade_level, data.Name, data.LRN, data.Birthday,data.Email,data.Ms_Teams,data.Nameofparents,data.Contactno,data.Emailofparents,data.Address, ID],
     (error, result) => {
       if (error) {
         console.error("Error updating personalinformation data: ", error);

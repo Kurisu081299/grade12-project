@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors'); // Import the cors middleware
-const dbConn = require('./config/db.config');
+const dbConn = require('./config/dbconfig');
 const app = express();
 const port = process.env.PORT || 8000;
 
